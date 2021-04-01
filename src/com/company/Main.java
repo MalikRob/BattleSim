@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -8,18 +10,60 @@ public class Main {
         int wChoice;
         int oChoice;
 
+        String swChoice = null;
+        String soChoice = null;
+
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+
         System.out.println("============================================");
         System.out.println("Welcome to Battle Simulator! (Made by Blonk)");
         System.out.println("============================================");
 
         System.out.println("Choose your weapon!");
+
         System.out.println("1) Sword");
         System.out.println("2) Spear");
         System.out.println("3) Mace");
+        wChoice = myObj.nextInt();
 
         System.out.println("Choose your opponent!");
         System.out.println("1) Zombie");
         System.out.println("2) Skeleton");
         System.out.println("3) Beast");
+        oChoice = myObj.nextInt();
+
+        switch (wChoice) {
+            case 1:
+                swChoice = "Sword";
+                break;
+            case 2:
+                swChoice = "Spear";
+                break;
+            case 3:
+                swChoice = "Mace";
+                break;
+
+            default:
+                System.out.println("Invalid Choice.");
+                System.exit(0);
+        }
+
+        switch (oChoice) {
+            case 1:
+                soChoice = "Zombie";
+                break;
+            case 2:
+                soChoice = "Skeleton";
+                break;
+            case 3:
+                soChoice = "Beast";
+                break;
+
+            default:
+                System.out.println("Invalid Choice.");
+                System.exit(0);
+        }
+
+        System.out.println("Weapon: " + swChoice + " and Opponent: " + soChoice);
     }
 }
