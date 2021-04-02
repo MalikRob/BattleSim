@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.model.Combat;
 import com.company.model.Opponent;
 import com.company.model.Weapon;
 
@@ -18,6 +19,7 @@ public class Main {
 
         Weapon implement = new Weapon(null, null, 0);
         Opponent enemy = new Opponent(0,0);
+        Combat letsDance = new Combat(implement, enemy);
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
@@ -106,7 +108,11 @@ public class Main {
                 System.exit(0);
         }
 
-        System.out.println("Weapon: \n" + implement.getImage() + "\nOpponent: \n" + soChoice + " " + enemy.getEnemyHP()
-                + " HP and " + enemy.getEnemyARMR() + " AC");
+//        System.out.println("Weapon: \n" + implement.getImage() + "\nOpponent: \n" + soChoice + " " + enemy.getEnemyHP()
+//                + " HP and " + enemy.getEnemyARMR() + " AC");
+
+        letsDance.simulation(implement, enemy);
+
+
     }
 }
