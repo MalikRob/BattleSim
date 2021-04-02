@@ -60,7 +60,7 @@ public class Main {
                 swChoice = "Mace";
 
                 implement.setName("Mace");
-                implement.setImage("<<()>>\n" +
+                implement.setImage("               <<()>>\n" +
                         "                )__(\n" +
                         "                )__(\n" +
                         "                )__(\n" +
@@ -87,12 +87,18 @@ public class Main {
         switch (oChoice) {
             case 1:
                 soChoice = "Zombie";
+                enemy.setEnemyHP(120);
+                enemy.setEnemyARMR(40);
                 break;
             case 2:
                 soChoice = "Skeleton";
+                enemy.setEnemyHP(50);
+                enemy.setEnemyARMR(60);
                 break;
             case 3:
                 soChoice = "Beast";
+                enemy.setEnemyHP(100);
+                enemy.setEnemyARMR(50);
                 break;
 
             default:
@@ -100,6 +106,7 @@ public class Main {
                 System.exit(0);
         }
 
-        System.out.println("Weapon: \n" + implement.getImage() + "\nOpponent: \n" + soChoice);
+        System.out.println("Weapon: \n" + implement.getImage() + "\nOpponent: \n" + soChoice + " " + enemy.getEnemyHP()
+                + " HP and " + enemy.getEnemyARMR() + " AC");
     }
 }
