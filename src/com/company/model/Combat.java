@@ -34,8 +34,11 @@ public class Combat {
         int bonus = test1.getChanceToHit();
 
         double a = Math.random()*(20-1+1)+1;
+        int ai=(int)a;
 
-        System.out.println(bonus + a);
+        int attackRoll = bonus + ai;
+
+        System.out.printf(String.valueOf(attackRoll));
 
         System.exit(0);
     }
