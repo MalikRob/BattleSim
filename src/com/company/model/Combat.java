@@ -33,19 +33,22 @@ public class Combat {
         String wname = test1.getName();
         int bonus = test1.getChanceToHit();
 
-        double a = Math.random()*(20-1+1)+1;
-        int ai=(int)a;
+        while (HP > 0) {
+            double a = Math.random() * (20 - 1 + 1) + 1;
+            int ai = (int) a;
 
-        int attackRoll = bonus + ai;
+            int attackRoll = bonus + ai;
 
-        if (attackRoll >= AC) {
-            System.out.println("Congratulations, you hit!");
-        } else {
-            System.out.println("You missed.");
+            if (attackRoll >= AC) {
+                HP -= 50;
+                System.out.println("Congratulations, you hit!");
+            } else {
+                System.out.println("You missed.");
+            }
         }
 
         //System.out.printf(String.valueOf(attackRoll));
-
+        System.out.println("Congratulations, you win!");
         System.exit(0);
     }
 }
