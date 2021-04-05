@@ -41,14 +41,14 @@ public class Combat {
 
             if (attackRoll >= AC) {
                 HP -= 50;
-                System.out.println("Congratulations, you hit!");
+                System.out.println("You hit.");
             } else {
                 System.out.println("You missed.");
             }
         }
 
         //System.out.printf(String.valueOf(attackRoll));
-        System.out.println("Congratulations, you win!");
+        System.out.println("\nCongratulations, you win!");
         System.exit(0);
     }
 }
