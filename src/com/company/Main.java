@@ -90,17 +90,17 @@ public class Main {
             case 1:
                 soChoice = "Zombie";
                 enemy.setEnemyHP(120);
-                enemy.setEnemyARMR(40);
+                enemy.setEnemyARMR(15);
                 break;
             case 2:
                 soChoice = "Skeleton";
                 enemy.setEnemyHP(50);
-                enemy.setEnemyARMR(60);
+                enemy.setEnemyARMR(18);
                 break;
             case 3:
                 soChoice = "Beast";
                 enemy.setEnemyHP(100);
-                enemy.setEnemyARMR(50);
+                enemy.setEnemyARMR(20);
                 break;
 
             default:

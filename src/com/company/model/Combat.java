@@ -38,7 +38,13 @@ public class Combat {
 
         int attackRoll = bonus + ai;
 
-        System.out.printf(String.valueOf(attackRoll));
+        if (attackRoll >= AC) {
+            System.out.println("Congratulations, you hit!");
+        } else {
+            System.out.println("You missed.");
+        }
+
+        //System.out.printf(String.valueOf(attackRoll));
 
         System.exit(0);
     }
