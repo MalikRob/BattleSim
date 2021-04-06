@@ -40,7 +40,7 @@ public class Combat {
             int attackRoll = bonus + ai;
 
             if (attackRoll >= AC) {
-                HP -= 50;
+                HP -= test1.damage;
                 System.out.println("You hit.");
             } else {
                 System.out.println("You missed.");

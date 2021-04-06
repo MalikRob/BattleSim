@@ -17,7 +17,7 @@ public class Main {
         String swChoice = null;
         String soChoice = null;
 
-        Weapon implement = new Weapon(null, null, 0);
+        Weapon implement = new Weapon(null, null, 0, 0);
         Opponent enemy = new Opponent(0,0);
         Combat letsDance = new Combat(implement, enemy);
 
@@ -48,7 +48,8 @@ public class Main {
                 implement.setImage("      /| ________________\n" +
                         "O|===|* >________________>\n" +
                         "      \\|");
-                implement.setChanceToHit(10);
+                implement.setChanceToHit(5);
+                implement.setDamage(8);
                 break;
             case 2:
                 swChoice = "Spear";
@@ -56,7 +57,8 @@ public class Main {
                 implement.setName("Spear");
                 implement.setImage("---------------\\n" +
                         "_______________/\n");
-                implement.setChanceToHit(20);
+                implement.setChanceToHit(7);
+                implement.setDamage(9);
                 break;
             case 3:
                 swChoice = "Mace";
@@ -78,7 +80,8 @@ public class Main {
                         "            <|   <   >|\n" +
                         "              `.____.'\n" +
                         "                V  V");
-                implement.setChanceToHit(30);
+                implement.setChanceToHit(8);
+                implement.setDamage(10);
                 break;
 
             default:
@@ -89,18 +92,18 @@ public class Main {
         switch (oChoice) {
             case 1:
                 soChoice = "Zombie";
-                enemy.setEnemyHP(120);
-                enemy.setEnemyARMR(15);
+                enemy.setEnemyHP(22);
+                enemy.setEnemyARMR(8);
                 break;
             case 2:
                 soChoice = "Skeleton";
-                enemy.setEnemyHP(50);
-                enemy.setEnemyARMR(18);
+                enemy.setEnemyHP(13);
+                enemy.setEnemyARMR(13);
                 break;
             case 3:
                 soChoice = "Beast";
-                enemy.setEnemyHP(100);
-                enemy.setEnemyARMR(20);
+                enemy.setEnemyHP(37);
+                enemy.setEnemyARMR(14);
                 break;
 
             default:

@@ -4,11 +4,13 @@ public class Weapon {
     String name;
     String image;
     int chanceToHit;
+    int damage;
 
-    public Weapon(String name, String image, int chanceToHit) {
+    public Weapon(String name, String image, int chanceToHit, int damage) {
         this.name = name;
         this.image = image;
         this.chanceToHit = chanceToHit;
+        this.damage = damage;
     }
 
     public String getName() {
@@ -35,5 +37,11 @@ public class Weapon {
         this.chanceToHit = chanceToHit;
     }
 
+    public int getDamage() {
+        return damage;
+    }
 
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
 }
