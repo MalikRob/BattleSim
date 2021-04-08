@@ -49,6 +49,5 @@ public class Combat {
 
         //System.out.printf(String.valueOf(attackRoll));
         System.out.println("\nCongratulations, you win!");
-        System.exit(0);
     }
 }
