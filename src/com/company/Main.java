@@ -1,8 +1,6 @@
 package com.company;
 
-import com.company.model.Combat;
-import com.company.model.Opponent;
-import com.company.model.Weapon;
+import com.company.model.*;
 
 import java.util.Scanner;
 
@@ -17,9 +15,8 @@ public class Main {
         String swChoice = null;
         String soChoice = null;
 
-        Weapon implement = new Weapon(null, null, 0, 0);
+        Weapon implement = null;
         Opponent enemy = new Opponent(0,0);
-        Combat letsDance = new Combat(implement, enemy);
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
@@ -42,46 +39,13 @@ public class Main {
 
         switch (wChoice) {
             case 1:
-                swChoice = "Sword";
-
-                implement.setName("Sword");
-                implement.setImage("      /| ________________\n" +
-                        "O|===|* >________________>\n" +
-                        "      \\|");
-                implement.setChanceToHit(5);
-                implement.setDamage(8);
+                implement = new Dagger();
                 break;
             case 2:
-                swChoice = "Spear";
-
-                implement.setName("Spear");
-                implement.setImage("---------------\\n" +
-                        "_______________/\n");
-                implement.setChanceToHit(7);
-                implement.setDamage(9);
+                implement = new LongSword();
                 break;
             case 3:
-                swChoice = "Mace";
-
-                implement.setName("Mace");
-                implement.setImage("               <<()>>\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "                )__(\n" +
-                        "               _)__(_\n" +
-                        "             .'      `.\n" +
-                        "             | <   >  |>\n" +
-                        "            <|   <   >|\n" +
-                        "              `.____.'\n" +
-                        "                V  V");
-                implement.setChanceToHit(8);
-                implement.setDamage(10);
+                implement = new Greatsword();
                 break;
 
             default:
@@ -93,7 +57,7 @@ public class Main {
             case 1:
                 soChoice = "Zombie";
                 enemy.setEnemyHP(22);
-                enemy.setEnemyARMR(8);
+                enemy.setEnemyARMR(10);
                 break;
             case 2:
                 soChoice = "Skeleton";
@@ -111,11 +75,8 @@ public class Main {
                 System.exit(0);
         }
 
-//        System.out.println("Weapon: \n" + implement.getImage() + "\nOpponent: \n" + soChoice + " " + enemy.getEnemyHP()
-//                + " HP and " + enemy.getEnemyARMR() + " AC");
-
+        Combat letsDance = new Combat(implement, enemy);
         letsDance.simulation(implement, enemy);
-
 
     }
 }
