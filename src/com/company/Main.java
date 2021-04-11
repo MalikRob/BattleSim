@@ -1,14 +1,29 @@
 package com.company;
 
 import com.company.model.*;
-
 import java.util.Scanner;
 
+/**
+ * @author malik
+ *
+ * This program will display a menu with a list of options; Choose a weapon, choose an opponent, battle and Eit. The
+ * first two opens a different menu where you can choose from three options. And option three is meant to be taken last; it
+ * shows how many times you hit and miss until the opponent's health hits zero.
+ *
+ * @version 1.0
+ * @since 04/10/2021
+ */
 public class Main {
 
+    /**
+     * This class will repeatedly display the main menu screen regardless of the choice chosen except for "Exit" and
+     * also makes function calls and loads class instances depending on what the user chooses. And can instantly end
+     * the program if "Exit" is chosen.
+     * @param args
+     */
     public static void main(String[] args) {
-	// Call Methods & Menu display
 
+        //Empty variables needed.
         int wChoice = 0;
         int oChoice = 0;
         int nChoice = 100;
@@ -19,8 +34,10 @@ public class Main {
         Weapon implement = null;
         Opponent enemy = new Opponent(0,0);
 
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        // Create a Scanner object for user input.
+        Scanner myObj = new Scanner(System.in);
 
+        //Loop to repeatedly display the menu unless the [nChoice] variable is set to zero.
         while (nChoice != 0) {
             System.out.println("\n============================================");
             System.out.println("Welcome to Battle Simulator! (Made by Malik)");
@@ -32,6 +49,7 @@ public class Main {
             System.out.println("0)Exit");
             nChoice = myObj.nextInt();
 
+            //Loop to display and/or call certain methods and classes depending on user choice.
             if (nChoice == 1) {
                 System.out.println("\n1) Dagger");
                 System.out.println("2) Long Sword");
