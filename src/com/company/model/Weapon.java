@@ -3,7 +3,7 @@ package com.company.model;
 /**
  * @author malik
  *
- * This class will get, set, and provide a default constructor for all aspects of the choose weapon.
+ * This class will get, set, and provide a default constructor for all aspects of the choosen weapon.
  *
  * @version 1.0
  * @since 04/13/2021
